@@ -1,7 +1,6 @@
 package com.example.notesnest.dashboard.ui.slideshow;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -47,8 +46,11 @@ public class SlideshowFragment extends Fragment {
                 .setMessage("Are you sure you want to logout?")
                 .setPositiveButton("Logout", (dialog, which) -> {
                     FirebaseAuth.getInstance().signOut();
-                    startActivity(new Intent(root.getContext(), LoginActivity.class));
+                    Intent intent = new Intent(root.getContext(), LoginActivity.class);
+                    intent.putExtra("logout","");
+                    startActivity(intent);
                     getActivity().finish();
+
                 })
                 .setNegativeButton("No",((dialog, which) -> {
                     startActivity(new Intent(root.getContext(), DashboardActivity.class));

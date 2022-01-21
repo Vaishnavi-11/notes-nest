@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,6 +18,7 @@ import com.example.notesnest.R;
 import com.example.notesnest.databinding.FragmentGalleryBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.squareup.picasso.Picasso;
 
 
 public class GalleryFragment extends Fragment {
@@ -25,6 +28,7 @@ public class GalleryFragment extends Fragment {
 
     FirebaseUser user;
     TextView auth_user,auth_email;
+    ImageView auth_photo;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -45,8 +49,12 @@ public class GalleryFragment extends Fragment {
         user = FirebaseAuth.getInstance().getCurrentUser();
         auth_user = root.findViewById(R.id.auth_name);
         auth_email = root.findViewById(R.id.auth_email);
+        auth_photo = root.findViewById(R.id.auth_photo);
         auth_user.setText(user.getDisplayName());
         auth_email.setText(user.getEmail());
+        if(user.getPhotoUrl()!=null){
+            Picasso.with(root.getContext()).load(user.getPhotoUrl()).into(auth_photo);
+        }
         return root;
     }
 

@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.notesnest.dashboard.DashboardActivity;
+import com.example.notesnest.login.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         slogan.setAnimation(bottomAnim);
 
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
             finish();
         },4000);

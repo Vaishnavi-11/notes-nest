@@ -155,7 +155,6 @@
         android:layout_marginBottom="52dp"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -216,58 +215,67 @@
         app:srcCompat="@drawable/loginpic"
         android:contentDescription="@string/todo" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:contentDescription="TODO"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toStartOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:srcCompat="@drawable/facebook_logo"
-        tools:visibility="visible" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView2"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:contentDescription="TODO"-->
+<!--        android:visibility="visible"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/imageView4"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/imageView4"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/imageView4"-->
+<!--        app:srcCompat="@drawable/facebook_logo"-->
+<!--        tools:visibility="visible" />-->
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView4"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/imageView6"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/imageView2"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"-->
+<!--        app:layout_constraintVertical_bias="0.037"-->
+<!--        app:srcCompat="@drawable/google_logo" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView6"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:visibility="visible"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/imageView4"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/imageView4"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/imageView4"-->
+<!--        app:srcCompat="@drawable/twitter_logo"-->
+<!--        tools:visibility="visible" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView9"-->
+<!--        android:layout_width="407dp"-->
+<!--        android:layout_height="94dp"-->
+<!--        android:visibility="visible"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="1.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/linearLayout3"-->
+<!--        app:layout_constraintVertical_bias="0.25"-->
+<!--        app:srcCompat="@drawable/illustration"-->
+<!--        tools:visibility="visible" />-->
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView6"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        app:layout_constraintVertical_bias="0.037"
-        app:srcCompat="@drawable/google_logo" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:srcCompat="@drawable/twitter_logo"
-        tools:visibility="visible" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="407dp"
-        android:layout_height="94dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/linearLayout3"
-        app:layout_constraintVertical_bias="0.25"
-        app:srcCompat="@drawable/illustration"
-        tools:visibility="visible" />
+        app:layout_constraintVertical_bias="0.183" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
