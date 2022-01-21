@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".createnotes.NewNoteActivity"
+    android:id="@+id/notes_view"
+    android:orientation="vertical">
+
+    <include layout="@layout/new_note_action_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/note_title"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="Title"
+            android:singleLine="true"
+            android:textSize="30sp" />
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="2.5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#676767" />
+
+        <EditText
+            android:id="@+id/note_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Type here..."
+            android:inputType="textMultiLine"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/color_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/note_view"
+        android:padding="12dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/remove_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/remove_icon"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            android:contentDescription="remove any color added to the text" />
+        <Button
+            android:id="@+id/black"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="@color/black"/>
+
+        <Button
+            android:id="@+id/red"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="@color/red"/>
+
+        <Button
+            android:id="@+id/yellow"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="@color/yellow"/>
+
+        <Button
+            android:id="@+id/green"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="@color/green"/>
+
+        <Button
+            android:id="@+id/blue"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="@color/blue"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/note_view"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bold_icon"
+            android:layout_weight="1"
+            android:paddingVertical="10dp"
+            android:layout_marginHorizontal="5dp"
+            android:contentDescription="bold the text" />
+
+        <ImageView
+            android:id="@+id/italic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/italics_icon"
+            android:layout_weight="1"
+            android:paddingVertical="10dp"
+            android:layout_marginHorizontal="5dp"
+            android:contentDescription="italicize the text" />
+
+        <ImageView
+            android:id="@+id/underline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/underline_icon"
+            android:layout_weight="1"
+            android:paddingVertical="10dp"
+            android:layout_marginHorizontal="5dp"
+            android:contentDescription="underline the text" />
+
+        <ImageView
+            android:id="@+id/color_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/text_color_icon"
+            android:layout_weight="1"
+            android:paddingVertical="10dp"
+            android:layout_marginHorizontal="5dp"
+            android:contentDescription="color the text" />
+
+        <ImageView
+            android:id="@+id/highlight_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/highlight_icon"
+            android:layout_weight="1"
+            android:paddingVertical="10dp"
+            android:layout_marginHorizontal="5dp"
+            android:contentDescription="highlight the text" />
+
+    </LinearLayout>
+
+</LinearLayout>

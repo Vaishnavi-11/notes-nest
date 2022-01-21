@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/notes_view"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/note_view"
+    android:padding="12dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_below="@+id/notes_action_bar"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/note_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notes 1"
+        android:textSize="24dp"
+        android:textColor="#474747"
+        android:layout_marginStart="12dp"/>
+
+    <ImageView
+        android:id="@+id/delete_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/delete"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "607639957119",
+    "firebase_url": "https://notes-nest-default-rtdb.firebaseio.com",
+    "project_id": "notes-nest",
+    "storage_bucket": "notes-nest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607639957119:android:0e9045874cc33df948594a",
+        "android_client_info": {
+          "package_name": "com.example.notesnest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "607639957119-8gqdhcvfncor29lqc1mbk3ccsq1h7unc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0GIrgcOTtm7gvgXbNFKJ4w8J8Sow70SA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "607639957119-8gqdhcvfncor29lqc1mbk3ccsq1h7unc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Notes Nest</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Notes Nest</string>
+    <string name="nav_header_subtitle">www.notesnest.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Profile</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="profile">Profile</string>
+    <string name="other_options">Other options</string>
+    <string name="rate_us">Rate us</string>
+    <string name="share">Share</string>
+    <string name="authenticate">Authenticate</string>
+    <string name="logout">Logout</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="signin">SIGNIN</string>
+    <string name="or_sign_in_using">Or Sign-in using</string>
+    <string name="todo">TODO</string>
+    <string name="register">Register</string>
+    <string name="username">Username</string>
+    <string name="like_us">Like us on Facebook</string>
+    <string name="search_notes">Search notes</string>
+    <string name="your_notes">Your Notes</string>
+</resources>
