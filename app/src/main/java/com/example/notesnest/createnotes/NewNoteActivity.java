@@ -250,7 +250,7 @@ public class NewNoteActivity extends AppCompatActivity {
             reference.set(note).addOnSuccessListener(unused -> {
                 Toast.makeText(getApplicationContext(), "Note Saved Successfully!", Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.GONE);
-                Intent intent = new Intent(getApplicationContext(), DisplayNotesActivity.class);
+                Intent intent = new Intent(NewNoteActivity.this, DisplayNotesActivity.class);
                 startActivity(intent);
                 finish();
             }).addOnFailureListener(e -> {
@@ -269,7 +269,7 @@ public class NewNoteActivity extends AppCompatActivity {
             reference.update(note).addOnSuccessListener(unused -> {
                 Toast.makeText(getApplicationContext(), "Note Saved Successfully!", Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.GONE);
-                Intent intent = new Intent(getApplicationContext(), DisplayNotesActivity.class);
+                Intent intent = new Intent(NewNoteActivity.this, DisplayNotesActivity.class);
                 startActivity(intent);
                 finish();
             }).addOnFailureListener(e -> {

@@ -115,6 +115,7 @@ public class DisplayUploadsActivity extends AppCompatActivity {
             @Override
             protected void onBindViewHolder(@NonNull ViewHolder viewHolder, int i, @NonNull PDF pdf) {
                 viewHolder.pdf_title.setText(pdf.getName());
+
                 if(uploads.getSnapshots().size()==0){
                     image.setVisibility(View.VISIBLE);
                     uploadsList.setVisibility(View.INVISIBLE);
@@ -135,9 +136,9 @@ public class DisplayUploadsActivity extends AppCompatActivity {
                         .setMessage("Are you sure you want to delete the PDF?")
                         .setPositiveButton("Yes", (dialog, which) -> {
                             progressBar.setVisibility(View.VISIBLE);
-                            String key = adapter.getSnapshots().getSnapshot(viewHolder.getBindingAdapterPosition()).getKey();
+                            String key = adapter.getSnapshots().getSnapshot(viewHolder.getAdapterPosition()).getKey();
                             databaseReference.child(key).removeValue().addOnSuccessListener(unused -> storageReference.child("notes-nest/"+user.getUid()+"/uploads").child(pdf.getName()+".pdf").delete().addOnSuccessListener(unused1 -> {
-                                if(uploads.getSnapshots().size()==0 || viewHolder.getBindingAdapterPosition()==0){
+                                if(uploads.getSnapshots().size()==0 || viewHolder.getAdapterPosition()==0){
                                     image.setVisibility(View.VISIBLE);
                                     uploadsList.setVisibility(View.INVISIBLE);
                                 }else{
@@ -170,6 +171,7 @@ public class DisplayUploadsActivity extends AppCompatActivity {
                 return new ViewHolder(view);
             }
         };
+
         uploadsList.setLayoutManager(new LinearLayoutManager(this));
         uploadsList.setAdapter(adapter);
         uploadActivityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
@@ -248,11 +250,13 @@ public class DisplayUploadsActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        adapter.notifyDataSetChanged();
         adapter.startListening();
     }
     @Override
     protected void onStop() {
         super.onStop();
+        adapter.notifyDataSetChanged();
         adapter.stopListening();
     }
 }
