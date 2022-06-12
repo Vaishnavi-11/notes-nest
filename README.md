@@ -21,9 +21,9 @@
 ## Technologies
 
 Application is created with:
-* Java
-* Google Firebase
-* Android Studio
+* Java <img src="Snapshots/java.png" width="28"></td>
+* Google Firebase <img src="Snapshots/firebase.png" width="22"></td>
+* Android Studio <img src="Snapshots/android_studio.png" width="22"></td>
 
 ## User Interface Snapshots
 
